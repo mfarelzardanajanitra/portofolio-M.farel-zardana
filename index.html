@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/Alpik%20Syaputra/Documents/portofoliozainalarifinn.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Zainal Arifin</title>
+    
+    <link href="./Portofolio - Zainal Arifin_files/css2" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           1. RESET DASAR
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #e9ecef; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* =========================================
+           2. KOTAK UTAMA (CONTAINER)
+           ========================================= */
+        .kontainer-web {
+            width: 100%;
+            max-width: 1100px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+            overflow: hidden; 
+        }
+
+        /* =========================================
+           3. BAGIAN ATAS (HEADER MERAH MAROON)
+           ========================================= */
+        .header-profil {
+            background: linear-gradient(135deg, #7b241c, #922b21); 
+            color: #ffffff;
+            padding: 40px 50px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .foto-lingkaran {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 5px solid rgba(255, 255, 255, 0.3); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+
+        /* Pengaturan Tabel Identitas Header */
+        .info-header {
+            color: #ffffff;
+        }
+
+        .tabel-identitas {
+            border-collapse: collapse; 
+        }
+
+        .tabel-identitas td {
+            padding: 6px 0; 
+            vertical-align: middle;
+            font-size: 20px; /* Ukuran font dibuat SAMA semua */
+        }
+
+        .tabel-identitas .label {
+            font-weight: 600; /* Teks kiri ditebalkan */
+            white-space: nowrap; 
+        }
+
+        .tabel-identitas .titik-dua {
+            padding: 0 15px; 
+            font-weight: 600;
+        }
+
+        .tabel-identitas .nilai {
+            font-weight: 600; /* Teks kanan ditebalkan agar seragam */
+        }
+
+        /* =========================================
+           4. PEMBUNGKUS KONTEN TENGAH (KIRI & KANAN)
+           ========================================= */
+        .area-tengah {
+            display: flex;
+            min-height: 450px; 
+        }
+
+        /* --- SIDEBAR KIRI (BIRU DONGKER) --- */
+        .sidebar-kiri {
+            width: 320px;
+            background-color: #1a252f; 
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent; 
+        }
+
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .menu-item.aktif {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 5px solid #3498db; 
+        }
+
+        .menu-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f39c12; 
+            margin-bottom: 5px;
+        }
+
+        .menu-item p {
+            font-size: 13px;
+            color: #bdc3c7;
+            line-height: 1.5;
+        }
+
+        /* --- KONTEN KANAN (PUTIH BERSIL) --- */
+        .konten-kanan {
+            flex: 1; 
+            background-color: #ffffff;
+            padding: 40px 50px;
+            color: #333333;
+        }
+
+        .halaman {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .halaman.aktif {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .halaman h2 {
+            font-size: 24px;
+            color: #7b241c; 
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        .halaman p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .halaman ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .halaman ul li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* =========================================
+           5. BAGIAN BAWAH (FOOTER HIJAU TEAL)
+           ========================================= */
+        .footer-web {
+            background-color: #117a65; 
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* =========================================
+           6. PENGATURAN LAYAR HP (RESPONSIF)
+           ========================================= */
+        @media (max-width: 768px) {
+            .header-profil {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .foto-lingkaran {
+                margin-bottom: 15px;
+            }
+            .area-tengah {
+                flex-direction: column;
+            }
+            .sidebar-kiri {
+                width: 100%;
+            }
+            .konten-kanan {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kontainer-web">
+
+        <header class="header-profil">
+            <img src="file:///C:/Users/Alpik%20Syaputra/Documents/zainalarifin.png" alt="Foto Profil Zainal Arifin" class="foto-lingkaran">
+            
+            <div class="info-header">
+                <table class="tabel-identitas">
+                    <tbody><tr>
+                        <td class="label">Nama</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">Zainal Arifin</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">701250309</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kelas</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">H</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Mata Kuliah</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">Pemrograman Web</td>
+                    </tr>
+                </tbody></table>
+            </div>
+        </header>
+
+        <div class="area-tengah">
+            
+            <aside class="sidebar-kiri">
+                <div class="menu-item" onclick="gantiHalaman(&#39;profil&#39;, this)">
+                    <h4>Profil</h4>
+                    <p>Zainal Arifin<br>Lahir: 24 Maret 2005</p>
+                </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;pendidikan&#39;, this)">
+                    <h4>Riwayat Pendidikan</h4>
+                    <ul style="font-size: 13px; color: #bdc3c7; line-height: 1.5; margin-left: 15px; padding-left: 10px;">
+                        <li>SD 118 Karang Berahi</li>
+                        <li>MTs Negeri 3 Merangin</li>
+                        <li>SMK Negeri 10 Merangin</li>
+                        <li>
+                            S1 UIN Sultan Thaha Saifuddin Jambi<br>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;organisasi&#39;, this)">
+                    <h4>Riwayat Organisasi</h4>
+                    <p>• Osim MTs Negeri 3 Merangin<br>• Pramuka</p>
+                </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;pekerjaan&#39;, this)">
+                    <h4>Riwayat Pekerjaan</h4>
+                    <p>• Menjalankan usaha street food<br>• Waiters cafe</p>
+                </div>
+                <div class="menu-item aktif" onclick="gantiHalaman(&#39;karya&#39;, this)">
+                    <h4>Karya Tulis / Produk</h4>
+                    <p>• Dashboard Rekapitulasi<br>• Web Development</p>
+                </div>
+            </aside>
+
+            <main class="konten-kanan">
+                
+                <div id="profil" class="halaman">
+                    <h2>Portofolio Diri 5 Tahun Mendatang</h2>
+                    <p>Nama saya Zainal Arifin,Saya telah menyelesaikan pendidikan jenjang sarjana (S1) di UIN SULTAN THAHA SAIFUDDIN JAMBI.</p>
+                    <p>Saat ini saya bekerja di salah satu BUMN dan sedang menjalakan usaha rumahan berskala mikro.</p>
+                    <p>Target dan dedikasi saya adalah terus mengimplementasikan teknologi dalam dunia kerja dan usaha seiring dengan perkembangan zaman yang sangat pesat.</p>
+                </div>
+
+                <div id="pendidikan" class="halaman">
+                    <h2>Riwayat Pendidikan Formal</h2>
+                    <ul>
+                        <li><strong>Sekolah Dasar (SD) – Sekolah Menengah Pertama (SMP)</strong><br>Memulai perjalanan pendidikan dasar dan menengah dengan membangun fondasi kedisiplinan, kemampuan komunikasi, dan rasa ingin tahu yang tinggi terhadap hal-hal baru.</li>
+                        <li><strong>Sekolah Menengah Atas (SMA)</strong><br>Pada masa ini, kemampuan logika dan ketertarikan terhadap dunia teknologi mulai terbentuk dan terasah.</li>
+                        <li><strong>S1 Komputer (S.Kom)</strong><br>Menyelesaikan gelar sarjana di UIN STS JAMBI dengan bekal ilmu komputer yang komprehensif. Selama masa perkuliahan, saya mendalami pemecahan masalah berbasis teknologi, pengembangan sistem, dan siap mengaplikasikan pengetahuan komputasi ke dalam dunia profesional.</li>
+                        <li><strong>Pengembangan Diri (Teknologi)</strong><br>Aktif mempelajari pemrograman secara mandiri termasuk pembuatan antarmuka web, visualisasi data, dan implementasi algoritma trading.</li>
+                    </ul>
+                </div>
+
+                <div id="organisasi" class="halaman">
+                    <h2>Pengalaman Organisasi</h2>
+                    <ul>
+                        <li><strong>Menjabat sebagai ketua OSIM</strong><br>Hanya 1 periode dan terlibat dalam inisiatif kepemimpinan dan kegiatan di lingkungan sekolah.</li>
+                        <li><strong>Sebagai Anggota</strong><br> Berpartisipasi dan terlibat dalam berbagai kegiatan ke Pramukaan baik di luar maupun di dalam lingkungan sekolah.</li>
+                    </ul>
+                </div>
+
+                <div id="pekerjaan" class="halaman">
+                    <h2>Riwayat Pekerjaan &amp; Karir</h2>
+                    <ul>
+                        <li><strong>Pelaku usaha UMKM</strong><br>Menjalankan usaha UMKM street food di daerah Bangko.</li>
+                        <li><strong>Waiters cafe</strong><br>Berkontribusi dalam manajemen pelaksanan usaha cafe.</li>
+                        <li><strong>Affiliator</strong><br>Berkontribusi dalam promosi dan pemasaran produk dan jasa.</li>
+                        <li><strong>Konten Kreator</strong><br>Berkreasi dalam dunia konten digital di berbagai platform sosial media.</li>
+                        <li><strong>Sistem Analis</strong><br>Magang kerja sebagai sistem analis di sebuah perusahaan di Jambi.</li>
+                    </ul>
+                </div>
+
+                <div id="karya" class="halaman aktif">
+                    <h2>Karya Tulis &amp; Produk Digital</h2>
+                    <ul>
+                        <li><strong>Pengaruh Implementasi E-Commerce teradap Peningkatan Penjualan</strong><br>Latar belakang digitalisasi UMKM, Metode penelitian, Analisis data penjualan sebelum dan sesudah penggunaan E-Commerce, Kesimpulan dan rekomendasi.</li>
+                        <li><strong>Website E-Commerce UMKM</strong><br>Manajerial sistem penjualan dengan berbagai fitur untuk memudahkan proses usaha UMKM.</li>
+                    </ul>
+                </div>
+
+            </main>
+        </div>
+
+        <footer class="footer-web">
+            "Mencari Peluang dan Membuat kesempatan"
+        </footer>
+
+    </div>
+
+    <script>
+        function gantiHalaman(idHalaman, elemenYangDiklik) {
+            let semuaHalaman = document.querySelectorAll('.halaman');
+            semuaHalaman.forEach(function(hal) {
+                hal.classList.remove('aktif');
+            });
+
+            document.getElementById(idHalaman).classList.add('aktif');
+
+            let semuaMenu = document.querySelectorAll('.menu-item');
+            semuaMenu.forEach(function(menu) {
+                menu.classList.remove('aktif');
+            });
+
+            elemenYangDiklik.classList.add('aktif');
+        }
+    </script>
+
+
+</body></html>
