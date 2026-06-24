@@ -1,500 +1,368 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portofolio 5 Tahun Mendatang</title>
+<!-- saved from url=(0072)file:///C:/Users/Alpik%20Syaputra/Documents/portofoliozainalarifinn.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Zainal Arifin</title>
+    
+    <link href="./Portofolio - Zainal Arifin_files/css2" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           1. RESET DASAR
+           ========================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        body {
+            background-color: #e9ecef; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Lato', Arial, sans-serif;
-}
+        /* =========================================
+           2. KOTAK UTAMA (CONTAINER)
+           ========================================= */
+        .kontainer-web {
+            width: 100%;
+            max-width: 1100px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+            overflow: hidden; 
+        }
 
-body{
-    background:#f2f2f2;
-    padding:20px;
-}
+        /* =========================================
+           3. BAGIAN ATAS (HEADER MERAH MAROON)
+           ========================================= */
+        .header-profil {
+            background: linear-gradient(135deg, #7b241c, #922b21); 
+            color: #ffffff;
+            padding: 40px 50px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
 
-.container{
-    width:80%;
-    margin:auto;
-    background:white;
-    border:2px solid #ccc;
-}
+        .foto-lingkaran {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 5px solid rgba(255, 255, 255, 0.3); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
 
-/* ===== BANNER ===== */
-.banner{
-    background:#3498db;
-    color:white;
-    padding:0;
-    overflow:hidden;
-    position:relative;
-    min-height:180px;
-}
+        /* Pengaturan Tabel Identitas Header */
+        .info-header {
+            color: #ffffff;
+        }
 
-/* Dekorasi lingkaran transparan */
-.banner::before{
-    content:"";
-    position:absolute;
-    width:260px;
-    height:260px;
-    background:rgba(255,255,255,0.06);
-    border-radius:50%;
-    top:-80px;
-    right:80px;
-    pointer-events:none;
-}
-.banner::after{
-    content:"";
-    position:absolute;
-    width:160px;
-    height:160px;
-    background:rgba(255,255,255,0.06);
-    border-radius:50%;
-    bottom:-50px;
-    right:300px;
-    pointer-events:none;
-}
+        .tabel-identitas {
+            border-collapse: collapse; 
+        }
 
-.banner-layout{
-    display:flex;
-    align-items:center;
-    padding:28px 36px;
-    gap:28px;
-    position:relative;
-    z-index:2;
-    min-height:180px;
-}
+        .tabel-identitas td {
+            padding: 6px 0; 
+            vertical-align: middle;
+            font-size: 20px; /* Ukuran font dibuat SAMA semua */
+        }
 
-/* Foto profil */
-.banner-photo{
-    flex-shrink:0;
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    border:3px solid rgba(255,255,255,0.55);
-    background:rgba(255,255,255,0.12);
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
+        .tabel-identitas .label {
+            font-weight: 600; /* Teks kiri ditebalkan */
+            white-space: nowrap; 
+        }
 
-.banner-photo img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    object-position: center 10%;
-    display:block;
-}
+        .tabel-identitas .titik-dua {
+            padding: 0 15px; 
+            font-weight: 600;
+        }
 
-/* Placeholder jika foto belum ada */
-.banner-photo svg{
-    opacity:0.55;
-}
+        .tabel-identitas .nilai {
+            font-weight: 600; /* Teks kanan ditebalkan agar seragam */
+        }
 
-/* Garis pemisah vertikal */
-.banner-sep{
-    width:1px;
-    height:90px;
-    background:rgba(255,255,255,0.3);
-    flex-shrink:0;
-}
+        /* =========================================
+           4. PEMBUNGKUS KONTEN TENGAH (KIRI & KANAN)
+           ========================================= */
+        .area-tengah {
+            display: flex;
+            min-height: 450px; 
+        }
 
-/* Teks info */
-.banner-info{
-    flex:1;
-}
+        /* --- SIDEBAR KIRI (BIRU DONGKER) --- */
+        .sidebar-kiri {
+            width: 320px;
+            background-color: #1a252f; 
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
 
-.banner-tagline{
-    font-size:10px;
-    font-weight:300;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.65);
-    margin:0 0 7px 0;
-}
+        .menu-item {
+            padding: 20px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-left: 5px solid transparent; 
+        }
 
-.banner-name{
-    font-family:'Playfair Display', serif;
-    font-size:28px;
-    font-weight:700;
-    color:#fff;
-    margin:0 0 5px 0;
-    letter-spacing:0.5px;
-}
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
 
-.banner-title{
-    font-size:12px;
-    font-weight:300;
-    letter-spacing:1.8px;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.78);
-    margin:0 0 14px 0;
-}
+        .menu-item.aktif {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 5px solid #3498db; 
+        }
 
-.banner-divider{
-    width:40px;
-    height:2px;
-    background:rgba(255,255,255,0.4);
-    margin:0 0 14px 0;
-}
+        .menu-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f39c12; 
+            margin-bottom: 5px;
+        }
 
-.banner-badges{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-}
+        .menu-item p {
+            font-size: 13px;
+            color: #bdc3c7;
+            line-height: 1.5;
+        }
 
-.badge{
-    background:rgba(255,255,255,0.15);
-    border:1px solid rgba(255,255,255,0.3);
-    color:white;
-    font-size:10px;
-    font-weight:400;
-    letter-spacing:0.8px;
-    padding:3px 12px;
-    border-radius:20px;
-}
+        /* --- KONTEN KANAN (PUTIH BERSIL) --- */
+        .konten-kanan {
+            flex: 1; 
+            background-color: #ffffff;
+            padding: 40px 50px;
+            color: #333333;
+        }
 
-/* ===== KONTEN ===== */
-.content{
-    display:flex;
-    min-height:500px;
-}
+        .halaman {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
 
-.sidebar{
-    width:30%;
-    background:#f1c40f;
-    padding:20px;
-}
+        .halaman.aktif {
+            display: block;
+        }
 
-.sidebar ul{
-    padding-left:20px;
-}
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-.sidebar li{
-    margin:20px 0;
-}
+        .halaman h2 {
+            font-size: 24px;
+            color: #7b241c; 
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
 
-.sidebar a{
-    text-decoration:none;
-    color:black;
-    font-size:18px;
-    font-weight:bold;
-}
+        .halaman p {
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
 
-.sidebar a:hover{
-    color:red;
-}
+        .halaman ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
 
-.main{
-    width:70%;
-    background:#b76b6b;
-    color:white;
-    padding:25px;
-}
+        .halaman ul li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 8px;
+        }
 
-.section{
-    display:none;
-}
+        /* =========================================
+           5. BAGIAN BAWAH (FOOTER HIJAU TEAL)
+           ========================================= */
+        .footer-web {
+            background-color: #117a65; 
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
 
-.section:target{
-    display:block;
-}
-
-#default{
-    display:block;
-}
-
-.main:has(.section:target) #default{
-    display:none;
-}
-
-.main h2{
-    font-family:'Playfair Display', serif;
-    font-size:20px;
-    margin-bottom:6px;
-}
-
-.main .sub-label{
-    font-size:10px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.6);
-    margin-bottom:10px;
-}
-
-.main .section-divider{
-    width:36px;
-    height:2px;
-    background:rgba(255,255,255,0.4);
-    margin-bottom:16px;
-}
-
-.main p,
-.main li{
-    line-height:1.8;
-    font-size:15px;
-    font-weight:300;
-    color:rgba(255,255,255,0.92);
-}
-
-.main ul{
-    padding-left:20px;
-    margin-bottom:12px;
-}
-
-.main li{
-    margin-bottom:6px;
-}
-
-.main b{
-    font-weight:700;
-    color:#fff;
-}
-
-/* ===== FOOTER ===== */
-.footer{
-    background:#35b8b3;
-    color:white;
-    text-align:center;
-    padding:25px;
-    font-size:22px;
-    font-weight:bold;
-    font-family:'Playfair Display', serif;
-    font-style:italic;
-}
-</style>
-
+        /* =========================================
+           6. PENGATURAN LAYAR HP (RESPONSIF)
+           ========================================= */
+        @media (max-width: 768px) {
+            .header-profil {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .foto-lingkaran {
+                margin-bottom: 15px;
+            }
+            .area-tengah {
+                flex-direction: column;
+            }
+            .sidebar-kiri {
+                width: 100%;
+            }
+            .konten-kanan {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+    <div class="kontainer-web">
 
-    <!-- Banner -->
-    <div class="banner">
-        <div class="banner-layout">
-
-            <!-- Foto profil -->
-            <div class="banner-photo">
-                <!-- Ganti foto.jpeg dengan path foto Anda -->
-                <img src="foto.jpeg" alt="Foto Alpik"
-                     onerror="this.style.display='none'; this.parentElement.querySelector('svg').style.display='block'">
-                <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" style="display:none">
-                    <circle cx="27" cy="21" r="12" fill="white"/>
-                    <path d="M4 52c0-12.7 10.3-23 23-23s23 10.3 23 23"
-                          stroke="white" stroke-width="3" fill="none"/>
-                </svg>
+        <header class="header-profil">
+            <img src="file:///C:/Users/Alpik%20Syaputra/Documents/zainalarifin.png" alt="Foto Profil Zainal Arifin" class="foto-lingkaran">
+            
+            <div class="info-header">
+                <table class="tabel-identitas">
+                    <tbody><tr>
+                        <td class="label">Nama</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">Zainal Arifin</td>
+                    </tr>
+                    <tr>
+                        <td class="label">NIM</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">701250309</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kelas</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">H</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Mata Kuliah</td>
+                        <td class="titik-dua">:</td>
+                        <td class="nilai">Pemrograman Web</td>
+                    </tr>
+                </tbody></table>
             </div>
+        </header>
 
-            <!-- Garis pemisah -->
-            <div class="banner-sep"></div>
-
-            <!-- Info teks -->
-            <div class="banner-info">
-                <p class="banner-tagline">Portofolio · 5 Tahun Mendatang</p>
-                <h1 class="banner-name">M.farel zardana janitra</h1>
-                <p class="banner-title">Sistem Informasi &nbsp;·&nbsp; UIN Sulthan Thaha Saifuddin Jambi</p>
-                <div class="banner-divider"></div>
-                <div class="banner-badges">
-                    <span class="badge">Web Developer</span>
-                    <span class="badge">IT Staff</span>
-                    <span class="badge">Desainer Kreatif</span>
-                    <span class="badge">Technopreneurship</span>
+        <div class="area-tengah">
+            
+            <aside class="sidebar-kiri">
+                <div class="menu-item" onclick="gantiHalaman(&#39;profil&#39;, this)">
+                    <h4>Profil</h4>
+                    <p>Zainal Arifin<br>Lahir: 24 Maret 2005</p>
                 </div>
-            </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;pendidikan&#39;, this)">
+                    <h4>Riwayat Pendidikan</h4>
+                    <ul style="font-size: 13px; color: #bdc3c7; line-height: 1.5; margin-left: 15px; padding-left: 10px;">
+                        <li>SD 118 Karang Berahi</li>
+                        <li>MTs Negeri 3 Merangin</li>
+                        <li>SMK Negeri 10 Merangin</li>
+                        <li>
+                            S1 UIN Sultan Thaha Saifuddin Jambi<br>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;organisasi&#39;, this)">
+                    <h4>Riwayat Organisasi</h4>
+                    <p>• Osim MTs Negeri 3 Merangin<br>• Pramuka</p>
+                </div>
+                <div class="menu-item" onclick="gantiHalaman(&#39;pekerjaan&#39;, this)">
+                    <h4>Riwayat Pekerjaan</h4>
+                    <p>• Menjalankan usaha street food<br>• Waiters cafe</p>
+                </div>
+                <div class="menu-item aktif" onclick="gantiHalaman(&#39;karya&#39;, this)">
+                    <h4>Karya Tulis / Produk</h4>
+                    <p>• Dashboard Rekapitulasi<br>• Web Development</p>
+                </div>
+            </aside>
 
+            <main class="konten-kanan">
+                
+                <div id="profil" class="halaman">
+                    <h2>Portofolio Diri 5 Tahun Mendatang</h2>
+                    <p>Nama saya Zainal Arifin,Saya telah menyelesaikan pendidikan jenjang sarjana (S1) di UIN SULTAN THAHA SAIFUDDIN JAMBI.</p>
+                    <p>Saat ini saya bekerja di salah satu BUMN dan sedang menjalakan usaha rumahan berskala mikro.</p>
+                    <p>Target dan dedikasi saya adalah terus mengimplementasikan teknologi dalam dunia kerja dan usaha seiring dengan perkembangan zaman yang sangat pesat.</p>
+                </div>
+
+                <div id="pendidikan" class="halaman">
+                    <h2>Riwayat Pendidikan Formal</h2>
+                    <ul>
+                        <li><strong>Sekolah Dasar (SD) – Sekolah Menengah Pertama (SMP)</strong><br>Memulai perjalanan pendidikan dasar dan menengah dengan membangun fondasi kedisiplinan, kemampuan komunikasi, dan rasa ingin tahu yang tinggi terhadap hal-hal baru.</li>
+                        <li><strong>Sekolah Menengah Atas (SMA)</strong><br>Pada masa ini, kemampuan logika dan ketertarikan terhadap dunia teknologi mulai terbentuk dan terasah.</li>
+                        <li><strong>S1 Komputer (S.Kom)</strong><br>Menyelesaikan gelar sarjana di UIN STS JAMBI dengan bekal ilmu komputer yang komprehensif. Selama masa perkuliahan, saya mendalami pemecahan masalah berbasis teknologi, pengembangan sistem, dan siap mengaplikasikan pengetahuan komputasi ke dalam dunia profesional.</li>
+                        <li><strong>Pengembangan Diri (Teknologi)</strong><br>Aktif mempelajari pemrograman secara mandiri termasuk pembuatan antarmuka web, visualisasi data, dan implementasi algoritma trading.</li>
+                    </ul>
+                </div>
+
+                <div id="organisasi" class="halaman">
+                    <h2>Pengalaman Organisasi</h2>
+                    <ul>
+                        <li><strong>Menjabat sebagai ketua OSIM</strong><br>Hanya 1 periode dan terlibat dalam inisiatif kepemimpinan dan kegiatan di lingkungan sekolah.</li>
+                        <li><strong>Sebagai Anggota</strong><br> Berpartisipasi dan terlibat dalam berbagai kegiatan ke Pramukaan baik di luar maupun di dalam lingkungan sekolah.</li>
+                    </ul>
+                </div>
+
+                <div id="pekerjaan" class="halaman">
+                    <h2>Riwayat Pekerjaan &amp; Karir</h2>
+                    <ul>
+                        <li><strong>Pelaku usaha UMKM</strong><br>Menjalankan usaha UMKM street food di daerah Bangko.</li>
+                        <li><strong>Waiters cafe</strong><br>Berkontribusi dalam manajemen pelaksanan usaha cafe.</li>
+                        <li><strong>Affiliator</strong><br>Berkontribusi dalam promosi dan pemasaran produk dan jasa.</li>
+                        <li><strong>Konten Kreator</strong><br>Berkreasi dalam dunia konten digital di berbagai platform sosial media.</li>
+                        <li><strong>Sistem Analis</strong><br>Magang kerja sebagai sistem analis di sebuah perusahaan di Jambi.</li>
+                    </ul>
+                </div>
+
+                <div id="karya" class="halaman aktif">
+                    <h2>Karya Tulis &amp; Produk Digital</h2>
+                    <ul>
+                        <li><strong>Pengaruh Implementasi E-Commerce teradap Peningkatan Penjualan</strong><br>Latar belakang digitalisasi UMKM, Metode penelitian, Analisis data penjualan sebelum dan sesudah penggunaan E-Commerce, Kesimpulan dan rekomendasi.</li>
+                        <li><strong>Website E-Commerce UMKM</strong><br>Manajerial sistem penjualan dengan berbagai fitur untuk memudahkan proses usaha UMKM.</li>
+                    </ul>
+                </div>
+
+            </main>
         </div>
+
+        <footer class="footer-web">
+            "Mencari Peluang dan Membuat kesempatan"
+        </footer>
+
     </div>
 
-    <!-- Isi -->
-    <div class="content">
+    <script>
+        function gantiHalaman(idHalaman, elemenYangDiklik) {
+            let semuaHalaman = document.querySelectorAll('.halaman');
+            semuaHalaman.forEach(function(hal) {
+                hal.classList.remove('aktif');
+            });
 
-        <!-- Menu -->
-        <div class="sidebar">
-            <ul>
-                <li><a href="#profil">Profil</a></li>
-                <li><a href="#pendidikan">Riwayat Pendidikan</a></li>
-                <li><a href="#organisasi">Riwayat Organisasi</a></li>
-                <li><a href="#pekerjaan">Riwayat Pekerjaan</a></li>
-                <li><a href="#karya">Karya Tulis / Produk</a></li>
-            </ul>
-        </div>
+            document.getElementById(idHalaman).classList.add('aktif');
 
-        <!-- Konten -->
-        <div class="main">
+            let semuaMenu = document.querySelectorAll('.menu-item');
+            semuaMenu.forEach(function(menu) {
+                menu.classList.remove('aktif');
+            });
 
-            <!-- Default / Sambutan -->
-            <div id="default">
-                <h2>Portofolio Saya 5 Tahun Mendatang</h2>
-                <p class="sub-label">Selamat Datang</p>
-                <div class="section-divider"></div>
-                <p>
-                    Selamat datang di website portofolio saya. Saya adalah M.farel zardana janitra,
-                    mahasiswa Sistem Informasi yang memiliki semangat tinggi di bidang teknologi,
-                    desain kreatif, dan pengembangan web.
-                </p>
-                <br>
-                <p>
-                    Silakan pilih menu di sebelah kiri untuk melihat profil lengkap saya,
-                    riwayat pendidikan, pengalaman organisasi, pekerjaan, serta karya-karya
-                    yang telah saya hasilkan.
-                </p>
-            </div>
+            elemenYangDiklik.classList.add('aktif');
+        }
+    </script>
 
-            <!-- Profil -->
-            <div id="profil" class="section">
-                <h2>Profil</h2>
-                <p class="sub-label">Tentang Saya</p>
-                <div class="section-divider"></div>
 
-                <p><b>Nama :</b> M.farel zardana janitra</p>
-                <p><b>Program Studi :</b> Sistem Informasi</p>
-                <p><b>Universitas :</b> Universitas Islam Negeri Sulthan Thaha Saifuddin Jambi</p>
-                <p><b>Minat :</b> Web Development, Desain Grafis, Fotografi, Videografi</p>
-
-                <br>
-
-                <p>
-                    Saya adalah pribadi yang kreatif, adaptif, dan memiliki ketertarikan luas
-                    di bidang teknologi maupun seni visual. Pengalaman saya mencakup dunia
-                    percetakan, studio foto, otomotif, hingga membatik — yang membentuk
-                    wawasan saya menjadi lebih beragam dan kaya.
-                </p>
-                <br>
-                <p>
-                    Dalam 5 tahun mendatang, saya berencana melanjutkan studi S2 di King of
-                    Saudi Arabia University, sambil berkarier di perusahaan teknologi terkemuka
-                    sebagai Web Developer atau IT Specialist. Saya juga ingin membangun usaha
-                    sendiri di bidang teknologi dan kreatif digital.
-                </p>
-            </div>
-
-            <!-- Pendidikan -->
-            <div id="pendidikan" class="section">
-                <h2>Riwayat Pendidikan</h2>
-                <p class="sub-label">Jejak Akademik</p>
-                <div class="section-divider"></div>
-
-                <ul>
-                    <li>SD Negeri 101 Bungo</li>
-                    <li>SMP Negeri 1 Bungo</li>
-                    <li>SMA Negeri 2 Bungo — Bidang Teknologi</li>
-                    <li>S1 Sistem Informasi — UIN Sulthan Thaha Saifuddin Jambi <i>(sedang ditempuh)</i></li>
-                </ul>
-
-                <br>
-
-                <p>
-                    Selama menempuh pendidikan, saya aktif mengikuti kegiatan akademik dan
-                    non-akademik untuk mengembangkan kompetensi di bidang IT dan desain.
-                    Target saya adalah lulus dengan predikat terbaik, memiliki sertifikasi
-                    internasional di bidang IT, dan melanjutkan studi ke jenjang S2.
-                </p>
-            </div>
-
-            <!-- Organisasi -->
-            <div id="organisasi" class="section">
-                <h2>Riwayat Organisasi</h2>
-                <p class="sub-label">Pengalaman Berorganisasi</p>
-                <div class="section-divider"></div>
-
-                <ul>
-                    <li>Anggota Aktif Organisasi Kemahasiswaan Kampus</li>
-                    <li>Panitia Kegiatan Mahasiswa — Divisi Dokumentasi & Desain</li>
-                    <li>Kontributor kegiatan sosial dan bakti kampus</li>
-                </ul>
-
-                <br>
-
-                <p>
-                    Melalui pengalaman berorganisasi, saya mengembangkan kemampuan
-                    kepemimpinan, komunikasi efektif, dan kerja sama tim. Saya percaya
-                    bahwa organisasi adalah tempat terbaik untuk melatih softskill yang
-                    tidak diajarkan di bangku kuliah.
-                </p>
-                <br>
-                <p>
-                    Ke depan, saya ingin berkontribusi lebih luas — baik di komunitas
-                    teknologi lokal maupun dalam forum dan konferensi nasional di bidang
-                    Sistem Informasi.
-                </p>
-            </div>
-
-            <!-- Pekerjaan -->
-            <div id="pekerjaan" class="section">
-                <h2>Riwayat Pekerjaan</h2>
-                <p class="sub-label">Pengalaman Kerja & Magang</p>
-                <div class="section-divider"></div>
-
-                <ul>
-                    <li>Magang di Percetakan — desain layout & cetak digital</li>
-                    <li>Bekerja di Studio Foto — fotografi, editing, retouching</li>
-                    <li>Bekerja di Bidang Otomotif / Bengkel — manajemen & operasional</li>
-                    <li>Pengalaman Membatik — seni kreatif dan kerajinan tradisional</li>
-                </ul>
-
-                <br>
-
-                <p>
-                    Beragam pengalaman kerja tersebut memberikan saya perspektif yang luas:
-                    dari dunia kreatif visual, teknis, hingga kewirausahaan. Setiap tempat
-                    bekerja mengajarkan saya kedisiplinan, ketelitian, dan etos kerja yang kuat.
-                </p>
-                <br>
-                <p>
-                    Dalam 5 tahun mendatang, target karier saya adalah menjadi
-                    <b>Web Developer</b> atau <b>IT Staff</b> profesional di perusahaan teknologi,
-                    sekaligus membangun usaha sendiri di bidang teknologi kreatif.
-                </p>
-            </div>
-
-            <!-- Karya -->
-            <div id="karya" class="section">
-                <h2>Karya Tulis / Produk</h2>
-                <p class="sub-label">Portofolio Kreasi</p>
-                <div class="section-divider"></div>
-
-                <ul>
-                    <li>Desain Banner — promosi kegiatan kampus dan komunitas</li>
-                    <li>Desain Poster — visual campaign dan informasi publik</li>
-                    <li>Fotografi — dokumentasi kegiatan, portrait, dan produk</li>
-                    <li>Videografi — editing video kegiatan dan konten kreatif</li>
-                    <li>Website Portofolio — pengembangan web pribadi dengan HTML & CSS</li>
-                </ul>
-
-                <br>
-
-                <p>
-                    Karya-karya tersebut mencerminkan kemampuan saya dalam memadukan
-                    teknologi dengan kreativitas visual. Saya terus mengembangkan diri
-                    agar setiap karya yang dihasilkan memiliki nilai estetika sekaligus
-                    fungsionalitas yang tinggi.
-                </p>
-                <br>
-                <p>
-                    Target saya adalah memiliki portofolio profesional yang dapat digunakan
-                    untuk mendukung karier maupun usaha kreatif di masa depan.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        &ldquo;Kesuksesan hari ini adalah bukti dari kerja keras yang penuh konsistensi.&rdquo;
-    </div>
-
-</div>
-
-</body>
-</html>
+</body></html>
